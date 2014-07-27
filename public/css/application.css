@@ -1,0 +1,7 @@
+body {
+	text-align: center;
+	background-color: gray;
+  	background-image: url(/images/forest.png);
+  	background-size:   cover;                    
+  	background-repeat: no-repeat;
+}
