@@ -1,10 +1,10 @@
 RESULTS:
 <% if @game.winner == "Draw" %>
- <h1> it was a draw </h1>
+ <h1> You mean you'll put your rock down and I'll put down my sword, and we will try and kill each other like civilised people? </h1>
  <% elsif @game.winner.name == "computer" %>
- <h1> You lost, the computer won with <%= @game.winner.pick %></h1>
+ <h1> My name is Inigo Montoya. You killed my father, prepare to die! <%= @game.winner.pick %></h1>
 <% else %>
-<h1> You won, with <%= @game.winner.pick %> </h1>
+<h1> Simply inconceivable! <%= @game.winner.pick %> </h1>
 <%end%>
 
 
