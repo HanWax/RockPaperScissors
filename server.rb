@@ -7,7 +7,7 @@ class RockPaperScissors < Sinatra::Base
   configure :production do
     require 'newrelic_rpm'
   end
-  
+
   get '/' do
     erb :index
   end
@@ -21,7 +21,7 @@ class RockPaperScissors < Sinatra::Base
   	erb :play	
   end
 
-  post "/play" do
+  post '/play' do
   	player = Player.new(params[:name])
   	player.picks = params[:pick]
   	computer = generate_computer
