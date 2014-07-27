@@ -1,10 +1,17 @@
-RESULTS:
+<html>
+	<head>
+		<link href="/css/application.css" rel="stylesheet" type="text/css">
+	</head>
+
+<h2>Drum roll please...</h2>
 <% if @game.winner == "Draw" %>
- <h1> You mean you'll put your rock down and I'll put down my sword, and we will try and kill each other like civilised people? </h1>
+ <p> Hmm...looks like we're pretty even here. We going to need a decideder game. </p>
  <% elsif @game.winner.name == "computer" %>
- <h1> My name is Inigo Montoya. You killed my father, prepare to die! <%= @game.winner.pick %></h1>
+ <p> HAHAHAHA. Sorry not sorry. I won with <%= @game.winner.pick.downcase %></p>
 <% else %>
-<h1> Simply inconceivable! <%= @game.winner.pick %> </h1>
+<p> Dang! You won with <%= @game.winner.pick.downcase %>. Are you sure you didn't cheat? Think we're going to have to play again...</p>
 <%end%>
+
+</html>
 
 

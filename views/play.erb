@@ -1,4 +1,8 @@
-<h1>Oh dear, it seems like you entered. May the best man win! <%= @player%></h1>
+	<head>
+		<link href="/css/application.css" rel="stylesheet" type="text/css">
+	</head>
+
+<h2>Alright <%= @player%>, I'll be nice. You go first. </h2>
 
 <form action="/play" method="POST">
 	<button name="pick" value="Paper">Paper</button>
