@@ -29,6 +29,10 @@ class RockPaperScissors < Sinatra::Base
   	erb :outcome
   end
 
+  get '/register' do
+    erb :play
+  end
+
   def generate_computer
   	choice = ["Rock","Paper","Scissors"].sample
 
@@ -36,6 +40,8 @@ class RockPaperScissors < Sinatra::Base
   	comp.picks = choice
   	comp
   end
+
+
 
 
 

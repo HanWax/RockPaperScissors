@@ -4,13 +4,15 @@
 	</head>
 
 <h2>Drum roll please...</h2>
-<% if @game.winner == "Draw" %>
- <p> Hmm...looks like we're pretty even here. We going to need a decideder game. </p>
- <% elsif @game.winner.name == "computer" %>
- <p> HAHAHAHA. Sorry not sorry. I won with <%= @game.winner.pick.downcase %></p>
-<% else %>
-<p> Dang! You won with <%= @game.winner.pick.downcase %>. Are you sure you didn't cheat? Think we're going to have to play again...</p>
+	<% if @game.winner == "Draw" %>
+ 		<p> Hmm...looks like we're pretty even here. We're going to need a rematch. </p>
+ 	<% elsif @game.winner.name == "computer" %>
+ 		<p> HAHAHAHA. Sorry, not sorry. I won with <%= @game.winner.pick.downcase %></p>
+	<% else %>
+		<p> Dang! You won with <%= @game.winner.pick.downcase %>. Are you sure you didn't cheat? Think we're going to have to play again...</p>
 <%end%>
+
+	<a href="/new-game">Rematch</a>
 
 </html>
 
