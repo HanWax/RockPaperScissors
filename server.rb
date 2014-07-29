@@ -31,15 +31,10 @@ class RockPaperScissors < Sinatra::Base
 
   def generate_computer
   	choice = ["Rock","Paper","Scissors"].sample
-
   	comp = Player.new("computer")
   	comp.picks = choice
   	comp
   end
-
-
-
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
